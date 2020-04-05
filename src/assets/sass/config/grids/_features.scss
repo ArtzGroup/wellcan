@@ -1,0 +1,54 @@
+:root {
+    --features__cols: 1fr;
+    --features__rows: auto;
+    --features__areas:
+    " features__feature1--desc "
+    " features__feature1--img "
+    " features__feature2--desc "
+    " features__feature2--img "
+    " features__feature3--desc "
+    " features__feature3--img ";
+
+
+
+    @media screen and (min-width: 920px) {
+
+        --features__cols: 2.917vw 6.944vw 31.111vw 4.931vw 3.264vw 1.667vw 31.111vw 8.403vw 1fr 2.735vw;
+        --features__rows: auto 3.498842294828917vh auto 5.222536660663751vh 1.91162850527399025vh 1.926164136866478vh auto 5.980962181631078vh auto auto auto;
+        --features__areas:
+        " . . . . .  features__feature1--img features__feature1--img features__feature1--img features__feature1--img . "
+        " . . features__feature1--desc features__feature1--desc  . features__feature1--img features__feature1--img features__feature1--img features__feature1--img . "
+        " . . . . .  features__feature1--img features__feature1--img features__feature1--img features__feature1--img . "
+        " . features__feature2--img features__feature2--img features__feature2--img features__feature2--img  features__feature1--img features__feature1--img features__feature1--img features__feature1--img . "
+        " . features__feature2--img features__feature2--img features__feature2--img features__feature2--img  . . . . . "
+        " . features__feature2--img features__feature2--img features__feature2--img features__feature2--img .  . . . . "
+        " . features__feature2--img features__feature2--img features__feature2--img features__feature2--img  . features__feature2--desc features__feature2--desc . . "
+        ". . . . . . . . . ."
+        ". . features__feature3--desc features__feature3--desc features__feature3--desc . features__feature3--img features__feature3--img . ."
+        ". . features__feature3--desc features__feature3--desc features__feature3--desc . features__feature3--img features__feature3--img . ."
+        ". . features__feature3--desc features__feature3--desc features__feature3--desc . features__feature3--img features__feature3--img . .";
+
+    }
+
+
+    @media screen and (min-width: 767px) {
+        --features__cols: 1.667vw 1fr 1fr 1.667vw;
+        --features__rows: auto 3.498842294828917vh auto 5.222536660663751vh 0.41162850527399025vh 0.926164136866478vh auto 5.980962181631078vh auto auto auto;
+        --features__areas:
+        " . features__feature1--desc features__feature1--img . "
+        " . features__feature1--desc features__feature1--img . "
+        " .  features__feature1--desc features__feature1--img . "
+        " . features__feature2--img  features__feature1--img . "
+        " . features__feature2--img . . "
+        " . features__feature2--img features__feature2--desc . "
+        " . features__feature2--img features__feature2--desc . "
+        ". . . . "
+        ". features__feature3--desc features__feature3--img ."
+        ". features__feature3--desc features__feature3--img ."
+        ". features__feature3--desc features__feature3--img .";
+
+    }
+
+    
+
+}

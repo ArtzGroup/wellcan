@@ -1,0 +1,33 @@
+<div class="global__explore__secondary_navigation__page">
+  <h1 class="global__header1">Self-guided Learning</h1>
+  <p class="global__paragraph">
+    We can all use a little help to navigate life’s challenges. Morneau Shepell’s digital mental health support includes
+    a wealth of articles, videos and other resources you can consult to help manage the demands of work, family and
+    children, and life in general!
+  </p>
+
+
+  <div id="header-2" class="header">
+    <nav class="header-nav secondary_nav_search_box-section">
+
+      <ul class="menu menu-items">
+        <li *ngFor="let category of categories">
+          <a [routerLink]="['./individualCategory', category.id]" [routerLinkActive]="['selected']">
+            {{ category.name }}
+          </a>
+        </li>
+      </ul>
+      <!--<div class="search-box">
+          <input type="text" [(ngModel)]="searchTerm"  #inputBox class="text search-input glyphicon glyphicon-search search-icon"  placeholder="Type here to search..."/>
+        </div>
+        <div class="search-button" >
+          <button class="search-toggle" tabindex = "0" (click) = "onSearchClick($event)" data-selector="#header-2" [ngClass]="focusSearch ?'active':''"  >
+            <span class="sr-only" aria-hidden="true">{{ 'SEARCH_TITLE' | translate}}</span>
+          </button>
+        </div>-->
+    </nav>
+
+
+  </div>
+
+</div>

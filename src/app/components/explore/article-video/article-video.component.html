@@ -1,0 +1,25 @@
+
+<div class="global__explore__article__page">
+  <section class="article_img-section" *ngIf="selectedArticle.img_url && articleType !== 'infographic'">
+    <!-- <img class="category_article-img" src="{{selectedArticle.img_url}}" alt="{{selectedArticle.title}}"> -->
+    <div class="category_article-img" [ngStyle]="{'backgroundImage': 'url(' + selectedArticle.img_url + ')'}"><span class="sr-only">Image</span></div>
+  </section>
+
+  <section class="article_container-section" [ngStyle]="{ 'marginTop': !(selectedArticle.img_url) || (articleType == 'infographic') ? '0' : '-200px' }">
+    <article class="article-element">
+      <button class="back_btn global__button" (click)="onGoBack()">
+        <i class="fa fa-arrow-left"></i>
+        {{ selectedCategory.name }}
+      </button>
+
+      <h1 class="global__header1">{{ selectedArticle.title }}</h1>
+
+      <div class="article_content-wrapper" [innerHTML]="selectedArticle.content">
+      </div>
+
+      <img class="category_article-img" *ngIf="articleType === 'infographic'" src="{{ selectedArticle.img_url }}" alt="{{selectedArticle.title}}">
+
+    </article>
+  </section>
+
+</div>

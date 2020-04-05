@@ -1,0 +1,35 @@
+
+.landing__howWorks {
+    grid-area: landing__howWorks;
+    background: var(--text-color__light);
+    padding-top: 2.25rem; //72px 
+    padding-bottom: 0.8rem;
+
+    display: grid;
+    grid-template-columns: var(--howWorks__cols);
+    grid-template-rows: var(--howWorks__rows);
+    grid-template-areas: var(--howWorks__areas);
+
+    @media screen and (min-width: 767px) {
+        background: url('../images/backgrounds/circle.svg') top 7.708vw right 2.847vw/14.26px no-repeat,
+                    url('../images/backgrounds/circle.svg') top 0.60vh left -25px/50px no-repeat,
+                    url('../images/backgrounds/diamond.svg') bottom -12px right 36.111vw/28.01px no-repeat;
+    }
+    
+    .howWorks__wrapper {
+        grid-area: howWorks__wrapper;
+    }
+
+    .global__header2 {
+        margin: 0 16px; 
+    }
+
+    .global__paragraph {
+        margin: 0 16px 2rem;
+    } 
+
+    .global__bullet-list {
+        padding: 0;
+        margin: 2rem 16px;
+    }
+} 

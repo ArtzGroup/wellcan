@@ -1,0 +1,22 @@
+:root {
+  // Main-Section-Contact
+    --contact__columns: 1fr;
+    --contact__rows: auto;
+    --contact__areas:
+    " . "
+    " contact__form "
+    " envelope__image "
+    " square__image ";
+
+    @media screen and (min-width: 960px) {
+      --contact__columns: 0.5fr 1.5fr 0.5fr;
+      --contact__rows: auto;
+      --contact__areas:
+      ". . ."
+      "envelope__image contact__form square__image";
+    }
+
+    // @media screen and (min-width: 450px) {
+    //   --contact__columns: 435px;
+    // }
+}

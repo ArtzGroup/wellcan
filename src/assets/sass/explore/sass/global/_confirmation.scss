@@ -1,0 +1,73 @@
+.global-confirmation {
+  display: grid;
+  grid-template-columns: var(--Confirmation__columns);
+  grid-template-rows: var(--Confirmation__rows);
+  grid-template-areas: var(--Confirmation__areas);
+  justify-content: center;
+  align-content: center;
+  text-align: center;
+  transition: ease all .5s;
+  -webkit-transition: ease all .5s;
+  -o-transition: ease all .5s;
+  background: url('../../images/thankyou.svg') left top no-repeat, url('../../images/icons/flower.svg') 90% 85% no-repeat, url('../images/icons/rectangle.svg') 100% 25% no-repeat, url('../../../assets/images/icons/circle.svg') 95% top no-repeat, url('../../../assets/images/icons/Square.svg') 5% 5% no-repeat, url('../../../assets/images/icons/rectangle.svg') 35% 90% no-repeat, url('../../../assets/images/icons/circle.svg') 44% top no-repeat, url('../../../assets/images/icons/circle.svg') 75% 60% no-repeat;
+  background-size: 450px, 50px, 26px, 13px, 28px, 37px, 16px, 13px;
+  display: -ms-grid;
+  -ms-grid-columns: 1fr 440px 1fr;
+  -ms-grid-rows: 10vh auto 12px auto 46px 35vh;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  -ms-flex-line-pack: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  -webkit-box-pack: justify;
+  -ms-flex-pack: justify;
+
+
+  &__title {
+    grid-area: Confirmation__Title;
+    -ms-grid-row: 2;
+    -ms-grid-column: 2;
+  }
+
+  &__content {
+    grid-area: Confirmation__Content;
+    -ms-grid-row: 4;
+    -ms-grid-column: 2;
+  }
+
+  &__911 {
+    @include font-family-size(28px, normal);
+    background: url('../../../assets/images/Icons/phone.svg') 37% top no-repeat;
+    background-size: 28px;
+  }
+
+  &__featuredImage {
+    grid-area: Confirmation__FeaturedImg;
+    -ms-grid-row: 6;
+    -ms-grid-column: 2;
+  }
+}
+
+@media all and (max-width: 576px) {
+  .global-confirmation {
+    background: none;
+    -ms-grid-columns: 1fr 343px 1fr;
+    -ms-grid-rows: 10vh auto 32px auto 32px auto;
+
+    &__title {
+      -ms-grid-row: 2;
+      -ms-grid-column: 2;
+    }
+
+    &__content {
+      -ms-grid-row: 6;
+      -ms-grid-column: 2;
+    }
+
+    &__featuredImage {
+      -ms-grid-row: 4;
+      -ms-grid-column: 1;
+      -ms-grid-column-span: 3;
+    }
+  }
+}

@@ -1,0 +1,199 @@
+@import 'globalHome.scss';
+
+:host {
+
+  .header-menu {
+    -ms-grid-row: 1;
+    -ms-grid-column: 1;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-direction: column;
+    -webkit-box-align: center;
+    -webkit-box-pack: justify;
+    grid-area: global__header;
+    /*background: #F5F8FF;*/
+    padding: 25px 2vw;
+
+    .helpfulResources {
+      grid-area: selfGuidedLearning;
+    }
+  }
+
+  @media screen and (min-width: 660px) {
+    .header-menu {
+      flex-direction: row;
+    }
+  }
+
+  .header-menu a .logo {
+    height: auto;
+    margin: auto;
+    /*grid-area: logo;*/
+    min-width: 10vw;
+    margin-bottom: 20px;
+  }
+
+  @media screen and (min-width: 660px) {
+    .header-menu a .logo {
+      margin-bottom: 0;
+    }
+  }
+
+  .header-menu .menu-items {
+    display: block;
+    /*grid-area: menu;*/
+    align-items: center;
+    /*@include font-family-size(18px, normal);*/
+    font-size: 18px;
+    font-weight: normal;
+    line-height: 22px;
+    color: #00308F;
+    height: 100%;
+    -webkit-box-pack: center;
+    -webkit-box-align: center;
+    justify-content: center;
+    align-content: center;
+  }
+
+  @media screen and (min-width: 767px) {
+    .header-menu .menu-items {
+      display: -ms-grid;
+      display: grid;
+      -ms-grid-columns: auto auto auto auto auto auto;
+      grid-template-columns: auto auto auto auto auto auto;
+      -ms-grid-rows: auto;
+      grid-template-rows: auto;
+      grid-template-areas: "home programs selfGuidedLearning contact login language";
+    }
+  }
+
+  .header-menu .menu-items div {
+    padding-bottom: 16px;
+    -ms-grid-column: 3;
+  }
+
+  .header-menu .menu-items .menu-item {
+    text-decoration: none;
+    line-height: 22px;
+    margin-right: 32px;
+    padding: 10px 0 16px;
+    /*@include font-family-size(18px, normal);*/
+    font-size: 18px;
+    font-weight: normal;
+    color: #00308F;
+    cursor: pointer;
+    border-bottom: 2px solid transparent;
+  }
+
+  @media screen and (min-width: 1440px) {
+    .header-menu .menu-items .menu-item {
+      font-size: 1.05vw;
+    }
+  }
+
+  .header-menu .menu-items .menu-item:hover {
+    border-bottom: 2px solid #446FC8;
+    padding-bottom: 16px;
+  }
+
+  .header-menu .menu-items .menu-item.home {
+    grid-area: home;
+  }
+
+  .header-menu .menu-items .menu-item.programs {
+    grid-area: programs;
+  }
+
+  .header-menu .menu-items .menu-item.contact {
+    grid-area: contact;
+  }
+
+  .header-menu .menu-items .menu-item.changeLang {
+    grid-area: language;
+  }
+
+  .header-menu .menu-items .menu-item.login {
+    grid-area: login;
+    border: 1px solid #00308F;
+    padding: 10px 30px;
+    box-sizing: border-box;
+    border-radius: 100px;
+    color: #00308F;
+    background-color: transparent;
+  }
+
+  @media screen and (min-width: 767px) {
+    .header-menu .menu-items .menu-item.home {
+      -ms-grid-row: 1;
+      -ms-grid-column: 1;
+    }
+
+    .header-menu .menu-items .menu-item.programs {
+      -ms-grid-row: 1;
+      -ms-grid-column: 2;
+    }
+
+    .header-menu .menu-items .menu-item.contact {
+      -ms-grid-row: 1;
+      -ms-grid-column: 3;
+    }
+
+    .header-menu .menu-items .menu-item.changeLang {
+      -ms-grid-row: 1;
+      -ms-grid-column: 5;
+    }
+
+    .header-menu .menu-items .menu-item.login {
+      -ms-grid-row: 1;
+      -ms-grid-column: 4;
+    }
+  }
+
+  .header-menu .menu-items .menu-item.login.selected {
+    background-color: #00308F;
+    color: #28E6E1;
+  }
+
+  .header-menu .menu-items .menu-item.login:hover {
+    background-color: #00308F;
+    color: #28E6E1;
+  }
+
+  .header-menu .logo {
+    height: auto;
+    margin: auto;
+    grid-area: logo;
+    width: 150px;
+  }
+
+  .header-menu .mobile-menu {
+    grid-area: mobile-menu;
+    display: none;
+  }
+
+  .header-menu .selected {
+    border-bottom: 2px solid #446FC8;
+    padding-bottom: 16px;
+  }
+
+  @-webkit-keyframes fadeIn {
+    from {
+      opacity: 0;
+    }
+
+    to {
+      opacity: 1;
+    }
+  }
+
+  @keyframes fadeIn {
+    from {
+      opacity: 0;
+    }
+
+    to {
+      opacity: 1;
+    }
+  }
+}

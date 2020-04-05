@@ -1,0 +1,20 @@
+:root {
+    --howWorks__cols: 1fr;
+    --howWorks__rows: auto;
+    --howWorks__areas:
+    " howWorks__wrapper ";
+
+    @media screen and (min-width: 920px) {
+        --howWorks__cols: 18.056vw 1fr 18.056vw;
+    }
+
+
+    @media screen and (min-width: 767px) {
+        --howWorks__cols: 8.056vw 1fr 8.056vw;
+        --howWorks__rows: auto;
+        --howWorks__areas:
+        " . howWorks__wrapper . ";
+    }
+}
+
+// 

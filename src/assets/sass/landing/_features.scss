@@ -1,0 +1,79 @@
+.landing__features {
+    // Place features on the page
+    grid-area: landing__features;
+
+    // Set the inside of features.
+
+    display: grid; 
+    grid-template-columns: var(--features__cols);
+    grid-template-rows: var(--features__rows);
+    grid-template-areas: var(--features__areas); 
+    margin-bottom: 2.25rem;  
+
+    @media screen and (min-width: 767px) {
+        background: url('../images/backgrounds/circle.svg') top 43.377926421404684vh right 2.847vw/13.61px no-repeat,
+                    url('../images/backgrounds/diamond.svg') bottom 4.013377926421405vh left 7.083vw/28px no-repeat;
+                    padding-bottom: 4.5em; 
+    }
+
+    // Embded styles.
+    .global__header3 {
+        margin: 0 16px 12px;
+    }
+
+    .global__paragraph {
+        margin: 12px 16px 12px 32px;
+
+        @media screen and (min-width: 690px) {
+            margin: 12px 16px;
+        }
+    } 
+
+    .features__feature1--desc { grid-area: features__feature1--desc; align-self: center; }
+    .features__feature2--desc { grid-area: features__feature2--desc; align-self: center; }
+    .features__feature3--desc { grid-area: features__feature3--desc; align-self: center; }
+
+    .features__feature1--img {
+        grid-area: features__feature1--img;
+
+        width: 100%;
+        max-width: inherit;
+        margin-bottom: 61px;
+        margin-top: 2.313rem; // 37px
+    }
+
+    .features__feature2--img { 
+        grid-area: features__feature2--img; 
+        max-width: 118%; 
+        margin-left: -19.733vw;
+        margin-bottom: 3rem; // 48px
+        margin-top: 2.5rem; // 40px
+    }
+    .features__feature3--img { 
+        grid-area: features__feature3--img; 
+        margin-top: 4.313rem; // 40px
+    }
+
+    @media screen and (min-width: 690px) {
+        .features__feature3--desc,
+        .features__feature3--img {
+            float: right;
+            margin-top: 0;
+        }
+
+        .features__feature1--img,
+        .features__feature2--img {
+            margin: 0;
+            max-width: 100%;
+        }
+    }
+
+    @media screen and (min-width: 920px) {
+
+
+        .features__feature2--desc,
+        .features__feature2--img {
+            // margin-top: -6.200154360689478vh;
+        }
+    }
+}

@@ -1,0 +1,17 @@
+:root {
+    --isConfidential__columns: 1fr;
+    --isConfidential__rows: auto;
+    --isConfidential__areas:
+    " isConfidential__wrapper "
+    " features__feature4--img ";
+
+    @media screen and (min-width: 920px) {
+        --isConfidential__columns: 6.458vw 3.403vw 33.194vw 4.375vw;
+        --isConfidential__rows: auto;
+        --isConfidential__areas:
+        " . . isConfidential__wrapper isConfidential__wrapper "
+        ". features__feature4--img features__feature4--img .";
+    }
+}
+
+// 

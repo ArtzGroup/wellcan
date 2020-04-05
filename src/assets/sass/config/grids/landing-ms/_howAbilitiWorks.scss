@@ -1,0 +1,21 @@
+:root {
+    --howAbilitiWorks__columns: 1fr;
+    --howAbilitiWorks__rows: auto;
+    --howAbilitiWorks__areas:
+    " howAbilitiWorks__wrapper "
+    " features__feature2--img ";
+
+    @media screen and (min-width: 920px) {
+        // --howAbilitiWorks__columns: 18.056vw 1fr 18.056vw;
+        --howAbilitiWorks__columns: 48.125vw 2.431vw 39.833vw 9.611vw;
+        --howAbilitiWorks__rows: auto;
+        --howAbilitiWorks__areas:
+        " features__feature2--img . howAbilitiWorks__wrapper . ";
+    }
+
+
+    @media screen and (min-width: 767px) {
+    }
+}
+
+// 

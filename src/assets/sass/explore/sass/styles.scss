@@ -1,0 +1,548 @@
+@import 'global/button';
+@import "global/form";
+@import "global/animation";
+@import "mixins";
+@import 'config/_config';
+@import 'config/_fonts';
+@import 'config/_colors';
+
+/* autoprefixer grid: off */
+
+* {
+    box-sizing: border-box;
+}
+
+img {
+    max-width: 100%;
+}
+
+body {
+    background: var(--bc_ssp-white);
+    font-family: var(--primaryFont);
+    font-size: 100%;
+    margin: 0;
+    padding: 0;
+}
+
+.landing {
+  display: grid;
+  grid-template-columns: var(--landing__columns);
+  grid-template-rows: var(--landing__rows);
+  grid-template-areas: var(--landing__areas);
+  font-family: var(--primaryFont);
+  font-size: 100%;
+}
+
+.global__link {
+    color: var(--bc_ssp-blue-medium) !important;//#002680
+    margin: 0.9375rem 0; //15px 0;
+    font-weight: 600;
+    font-size: 1.125rem; //18px;
+    line-height: 1.5rem; //24px;
+    margin-bottom: 1.25rem; //20px
+    cursor: pointer;
+}
+
+.global__break {
+    display: block;
+}
+
+// Header styles to override material styles
+.global__header--download-app-dropdown-menu-items,
+.footer__download-app-dropdown-menu-items {
+  min-width: 150px !important;
+
+  .mat-menu-content{
+    .mat-menu-item {
+      font-size: 1rem !important;
+      text-decoration: none !important;
+    }
+
+  }
+}
+
+.mat-select-panel{
+  font-size: 1rem !important;
+}
+
+.global__desktop__root{
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  justify-content: space-between;
+}
+
+
+// FAQ page styles to override material theme for expansion panel   
+.faq__questions--container{
+  .faq__questions--wrapper{
+    .expansion-panel {
+      .expansion-panel-header{
+        padding-left: 0;
+        min-height: 48px;
+        height: auto !important; 
+
+        // &:hover, &:active, &:focus{
+        //   background: transparent;
+        // }
+
+        .mat-content{
+          flex-direction: row-reverse;
+          align-items: center;
+        }
+
+        .mat-expansion-indicator{
+          display: none;
+        }
+      }
+
+      .mat-expansion-panel-content{
+        .mat-expansion-panel-body{
+          padding-left: 0;
+        }
+      }
+
+      &.mat-expanded{
+        .expansion-panel-header{
+          .mat-content{
+            img{
+            transition: all .3s;
+            transform: rotateZ(90deg);
+            }
+          }
+        }
+      }
+    }
+  }
+
+  // Responsive styles
+  @media screen and (max-width: 640px) {
+    .faq__questions--wrapper{
+      .expansion-panel {
+        .expansion-panel-header{
+          padding:0;
+        }
+      }
+    }
+  }
+}
+
+
+// Call modal styles    
+.call-modal-overlay { 
+  .mat-dialog-container{
+      box-shadow: -2px 2px 8px rgba(0, 0, 0, 0.25);
+      border-radius: 10px;
+      background-color: var(--bc_ssp-white);
+
+      .modal-header{
+        border-bottom: none;
+
+        .close{
+          opacity: .75;
+
+          .material-icons{
+            font-size: 30px;
+            color: var(--bc_ssp-blue-primary);
+          }
+
+          &:hover, &:focus {
+            opacity: 1;
+          }
+        }
+      }
+      .modal-body{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        padding: 0 1.25rem 1.25rem; //0 20px 20px;
+
+        h3 {
+          font-weight: 600;
+          font-size: 1.125rem; //18px;
+          line-height: 1.5rem; //24px;
+          text-align: center;
+          color: var(--bc_ssp-blue-primary);
+          margin-bottom: 1rem; //16px;
+          max-width: 85%;
+        }
+
+        p {
+          margin-top: 0.625rem; //10px;
+        }
+
+        a{
+          font-weight: 600;
+          // font-size: 1.125rem; //18px;
+          letter-spacing: 0.015625rem; //0.25px;
+          // color: var(--bc_ssp-blue-primary);
+          // border-bottom: 2px solid var(--bc_ssp-blue-primary);
+          text-decoration: none;
+          
+        }
+      }
+  }
+}
+
+
+// Privacy Agreement modal styles    
+.privacy-agreement-modal-overlay {
+
+  .mat-dialog-container {
+    max-height: 96vh;
+    position: relative;
+
+    .modal-header{
+      .close{
+        position: absolute;
+        right: 1rem;
+        top: 1rem;
+      }
+    }
+  }
+
+  .modal-content, .mat-dialog-container{
+    box-shadow: -2px 2px 8px rgba(0, 0, 0, 0.25);
+    border-radius: 10px;
+    background-color: var(--bc_ssp-white);
+    overflow: hidden;
+    
+
+    .modal-header{
+      border-bottom: none;
+      display: flex;
+      flex-direction: column;
+
+      .close{
+        flex: 1;
+        opacity: .75;
+
+        .material-icons{
+          font-size: 30px;
+          color: var(--bc_ssp-blue-primary);
+        }
+
+        &:hover, &:focus {
+          opacity: 1;
+        }
+      }
+
+      h3 {
+        flex: 1;
+        text-align: center;
+        color: var(--bc_ssp-blue-primary);
+        margin: auto;
+        font-weight: bold;
+        font-size: 1.5rem; //24px;
+        line-height: 2.25rem; //36px or 150.3%;
+      }
+    }
+    .modal-body{
+      align-items: center;
+      margin: 0 30px 0 30px;
+      box-shadow: inset 0px 0px 20px 0px rgba(0, 0, 0, 0.08);
+      overflow-y: auto;
+      max-height: 76vh;
+
+      p {
+        font-family: var(--primaryFont);
+        font-size: 100%;
+        color: var(--bc_ssp-grey-1);
+        font-weight: normal;
+        line-height: 1.5rem; //24px;
+      }
+
+      a{
+        font-weight: 600;
+        letter-spacing: 0.015625rem; //0.25px;
+        color: var(--bc_ssp-blue-primary);
+        text-decoration: none;
+        
+      }
+    }
+
+    .modal-footer{
+      border-top: none;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+  }
+}
+
+// Get Started, profile edit, contact us form styles to override material theme  
+.global__getStarted__page,  
+    .global__profile__edit--page, 
+        .global__contactUs__page 
+  {
+    .getStarted__form__section-container, 
+        .profile__edit__section-container, 
+            .contactUs__form__section-container
+    {
+      .getStarted__form-wrapper, 
+          .profile__edit-wrapper,
+              .contactUs__form-wrapper
+      {
+        .form__container{
+          .form{
+            .privacy-element{
+              .privacy-element-checkbox{
+                .mat-checkbox-layout{
+                  .mat-checkbox-inner-container{
+                    margin-right: 1rem; //16px;
+                    
+                    .mat-checkbox-ripple{
+                      left: calc(50% - 18px);
+                      top: calc(50% - 18px);
+
+                      .mat-ripple-element{
+                        background: var(--bc_ssp-yellow-primary);
+                      }
+                    }
+                    .mat-checkbox-frame{
+                      background-color: #FFD800;
+                      border-radius: 5px;
+                      width: 20px;
+                      height: 20px;
+                      border: none;
+                    }
+
+                    .mat-checkbox-background{
+                      background-color: transparent;
+                      top: 3px;
+                      left: 3px;
+
+                      .mat-checkbox-checkmark{
+                        width: 20px;
+                        height: 20px;
+                        top: -3px;
+                        left: -3px;
+
+                        .mat-checkbox-checkmark-path{
+                          stroke-width: 2.5px;
+                          stroke: var(--bc_ssp-blue-primary) !important;
+                        }
+                      }
+                    }
+                  }
+                }
+              }
+            }
+
+            .form-element{
+              &.message-text {
+                .mat-form-field-wrapper{
+                  .mat-form-field-flex{
+                    .mat-form-field-infix{
+                      padding-top: 5px;
+                      height: 10em;
+                      background: var(--bc_ssp-white); // #FAFCFF;
+                      border: 1px solid rgba(0, 0, 0, 0.42);
+                      box-sizing: border-box;
+                      border-radius: 3px;
+
+                      textarea{
+                        min-height: 36px !important;
+                        max-height: 10em !important;
+                        margin-bottom: -3px;
+                        height: 10em !important;
+                        padding: 5px !important;
+                      }
+
+                      .mat-form-field-label-wrapper{
+                        label {
+                          padding-left: 0.625rem; // 10px
+                        }
+                      }
+                    }
+                  }
+
+                  .mat-form-field-underline{
+                    display: none;
+                  }
+                }
+              }
+
+              &.mat-focused.mat-form-field-should-float{
+                .mat-form-field-label-wrapper{
+                  .mat-form-field-label{
+                    color: var(--bc_ssp-blue-primary);
+
+                    .mat-form-field-required-marker{
+                      color: var(--bc_ssp-red-error);
+                    }
+                  }
+
+                }
+                .mat-form-field-underline{
+                  .mat-form-field-ripple{
+                    background-color: var(--bc_ssp-blue-primary);
+                  }
+                }
+
+                &.message-text {
+                  .mat-form-field-wrapper{
+                    .mat-form-field-flex{
+                      .mat-form-field-infix{
+                        border: 1px solid var(--bc_ssp-blue-primary);
+                        .mat-form-field-label-wrapper{
+                          top: -18px;
+                          label {
+                            padding-left: 0;
+                          }
+                        }
+                      }
+                    }
+
+                    .mat-form-field-underline{
+                      display: none;
+                    }
+                  }
+                }
+              }
+
+              &.mat-form-field-should-float{
+                &.message-text {
+                  .mat-form-field-wrapper{
+                    .mat-form-field-flex{
+                      .mat-form-field-infix{
+                        .mat-form-field-label-wrapper{
+                          top: -18px;
+                          label {
+                            padding-left: 0;
+                          }
+                        }
+                      }
+                    }
+                  }
+                }
+              }
+
+              &.mat-form-field-invalid{
+                .mat-form-field-label-wrapper{
+                  .mat-form-field-label{
+                    color: var(--bc_ssp-red-error);
+
+                    .mat-form-field-required-marker{
+                      color: var(--bc_ssp-red-error);
+                    }
+                  }
+
+                }
+                .mat-select.mat-select-invalid {
+                  .mat-select-arrow {
+                    color: var(--bc_ssp-red-error);
+                    
+                  }
+
+                }
+                .mat-form-field-underline{
+                  .mat-form-field-ripple{
+                    background-color: var(--bc_ssp-red-error);
+                  }
+                }
+
+                &.message-text {
+                  .mat-form-field-wrapper{
+                    .mat-form-field-flex{
+                      .mat-form-field-infix{
+                        border: 1px solid var(--bc_ssp-red-error);
+                      }
+                    }
+                  }
+                }
+              }
+            }
+          }
+      }
+    }
+  }
+}
+
+// Calendar/Datepicker styles to override material theme
+.mat-datepicker-popup{
+  .mat-calendar{
+    .mat-calendar-content{
+      .mat-calendar-table{
+        .mat-calendar-body{
+          tr {
+            td {
+              .mat-calendar-body-selected{
+                background-color: var(--bc_ssp-yellow-primary);
+                color: var(--bc_ssp-blue-footer);
+                font-weight: bold;
+                font-size: 0.875rem; //14px;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+// Responsive navigation bar styles to override material theme
+.responsive_menu-items {
+  button {
+    font-size: 1rem; //16px;
+    &.selected {
+      color: var(--bc_ssp-blue-primary);
+      border-left: 4px solid var(--bc_ssp-blue-primary);
+      background-color: var(--bc_ssp-blue-light);
+      &:hover, &:focus {
+        background-color: var(--bc_ssp-blue-light);
+      }
+    }
+  }
+}
+
+// Global mat-error color
+.mat-error{
+  color: var(--bc_ssp-red-error) !important;
+}
+
+// Material autocomplete dropdown option styles for "Share your Experience" / Contact us page 
+.mat-autocomplete-panel{
+  .mat-option {
+    .mat-option-text{
+      white-space: pre-line;
+      line-height: 26px;
+      max-height: 100%;
+    }
+  }
+}
+
+@keyframes fadeIn {
+    0% {
+      transform: scale(0.1);
+      opacity: 0;
+      transform:translateY(120px);
+    }
+    60% {
+      transform: scale(1.1);
+      opacity: 1;
+      transform:translateY(120px);
+    }
+    100% {
+      transform: scale(1);
+      transform:translateY(0);
+    }
+  }
+
+  @keyframes fadeInDelayed {
+      0% {
+          opacity: 0;
+          transform: scale(0.1);
+      }
+      50% {
+        transform: scale(0.011);
+      }
+      90% {
+        transform: scale(1.1);
+        opacity: 1;
+      }
+      100% {
+        transform: scale(1);
+      }
+    }

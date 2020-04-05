@@ -1,0 +1,63 @@
+<div class="global__explore__individual_category__page">
+
+  <section class="individual_category_container">
+    <div class="individual_category_div-wrapper">
+      <div class="individual_category-div">
+        <h2 class="category_title global_header2">{{selectedCategory.name}}</h2>
+
+        <div class="category_articles-wrapper">
+
+          <!----------------------------- article cards -------------------------------------->
+          <div class="category_article_card-div" *ngFor="let article of selectedCategory.articles; let i = index;">
+
+            <!----------------------------- text -------------------------------------->
+            <div *ngIf="article.type === 'text'" class="article_type_text-wrapper article_type_wrapper">
+              <div class="category_article-img" [ngStyle]="{'backgroundImage': 'url(' + article.img_url + ')'}"><span
+                  class="sr-only">Image</span></div>
+              <div class="category_article-body">
+                <h3 class="category_article-title global_header3">{{article.title}}</h3>
+                <p class="category_article-paragraph global__paragraph" [innerHTML]="cleanHTML(article.content)"> </p>
+                <a type="link" class="read_article_btn" tabindex="0"
+                  (click)="onReadArticle( selectedCategory.articles[i].id)">
+                  <img src="../../../../assets/images/explore/read_article_right_arrow.svg" alt="right-arrow">
+                  Read Article
+                </a>
+              </div>
+            </div>
+
+            <!----------------------------- video -------------------------------------->
+
+            <div *ngIf="article.type === 'video'" class="article_type_video-wrapper article_type_wrapper">
+              <!-- <img class="category_article-img" src="{{article.img_url}}" alt="image"> -->
+              <div class="category_article-video" [innerHTML]="article.content"><span class="sr-only">Video</span></div>
+              <div class="category_article-body">
+                <h3 class="category_article-title global_header3">{{article.title}}</h3>
+                <a type="link" class="read_article_btn" tabindex="0" (click)="onReadArticle(article.id)">
+                  <img src="../../../../assets/images/explore/read_article_right_arrow.svg" alt="right-arrow">
+                  Watch Video
+                </a>
+              </div>
+            </div>
+
+            <!----------------------------- infographic -------------------------------------->
+
+            <div *ngIf="article.type === 'infographic'" class="article_type_infographic-wrapper article_type_wrapper">
+              <!-- <img class="category_article-img" src="{{article.img_url}}" alt="image"> -->
+              <div class="category_article-img" [ngStyle]="{'backgroundImage': 'url(' + article.img_url + ')'}"><span
+                  class="sr-only">Image</span></div>
+              <div class="category_article-body">
+                <h3 class="category_article-title global_header3">{{article.title}}</h3>
+                <a type="link" class="read_article_btn" tabindex="0" (click)="onReadArticle(article.id)">
+                  <img src="../../../../assets/images/explore/read_article_right_arrow.svg" alt="right-arrow">
+                  Read Article
+                </a>
+              </div>
+            </div>
+
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+</div>

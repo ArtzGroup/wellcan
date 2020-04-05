@@ -1,0 +1,58 @@
+.landing__whatIs {
+    grid-area: landing__whatIs;
+    overflow: hidden;
+
+    display: grid;
+    grid-template-columns: var(--whatIs__columns);
+    grid-template-rows: var(--whatIs__rows);
+    grid-template-areas: var(--whatIs__areas);
+    padding: 0 16px;
+    margin-bottom: 5.125rem; 
+    margin-top: 3.25rem;
+
+
+
+
+    @media screen and (min-width: 768px) {
+        padding: 0;
+        background: url('../images/backgrounds/circle.svg') top 7.708vw right 2.847vw/14.26px no-repeat,
+                    url('../images/backgrounds/circle.svg') top 0.60vh left -25px/50px no-repeat;
+    }
+ 
+    .global__paragraph {
+        margin: 12px 0;
+    }   
+} 
+
+.whatIs__wrapper {
+    grid-area: whatIs__wrapper;
+
+    @media screen and (min-width: 768px) {
+        padding: 0 16px;
+        -ms-grid-column-span: 2!important;
+    }
+}
+
+.whatIs__plant1 {
+    grid-area: whatIs__plant1;
+    display: none;
+    align-self: end; 
+    margin-left: 6.069vw;
+
+    @media screen and (min-width: 920px) {
+        display: block;
+    }
+}
+
+.whatIs__plant2 {
+    grid-area: whatIs__plant2;
+    display: var(--display_item);
+    align-self: center;
+    padding-right: 10px;
+
+    @media screen and (min-width: 920px) {
+        display: block;
+        align-self: end; 
+        padding-right: 0;
+    }
+}

@@ -1,0 +1,27 @@
+:root {
+    --footer__columns: 1fr;
+    --footer__rows: 47px 1fr auto;
+    --footer__areas:
+    " . "
+    " footer__menu "
+    " footer__terms ";
+
+    @media screen and (min-width: 767px) and (max-width: 919px) {
+        --footer__columns: 8.056vw 1fr 4.056vw 8.056vw 8.056vw;
+        --footer__rows: 47px 1fr 51px auto;
+        --footer__areas:
+        ". . . . ."
+        " . footer_aboutMorneau footer_aboutMorneau . ."
+        ". footer__menu . . ."
+        ". footer__terms . . .";
+    }
+
+    @media screen and (min-width: 920px) {
+        --footer__columns: 16.056vw 1fr 4.056vw 16.056vw 16.056vw;
+        --footer__areas:
+        ". . . . ."
+        " . footer_aboutMorneau . footer__menu ."
+        ". . . . ."
+        ". footer__terms . . .";
+    }
+}

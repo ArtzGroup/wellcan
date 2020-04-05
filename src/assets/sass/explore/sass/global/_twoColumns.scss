@@ -1,0 +1,167 @@
+@import "../mixins";
+
+.page-body {
+  font-style: normal;
+  @include font-family-size(16px, normal);
+
+  & .global-title {
+    color: var(--brand-color-1);
+    @include font-family-size(42px, 800);
+    line-height: 106%;
+  }
+
+  & .global-description {
+    margin-top: 15px;
+    color: var(--grey-shade-5);
+    @include font-family-size(16px, normal);
+    line-height: 24px;
+    max-width: 330px;
+  }
+
+  .sections {
+    display: grid;
+    grid-template-columns: var(--TwoCol__columns);
+    grid-template-rows: var(--TwoCol__rows);
+    grid-template-areas: var(--TwoCol__areas);
+    transition: ease all .5s;
+    -webkit-transition: ease all .5s;
+    -o-transition: ease all .5s;
+    background: url('../../../assets/images/icons/circle.svg') 90% top no-repeat, url('../../../assets/images/icons/rectangle.svg') right 25% no-repeat;
+    background-size: 13px, 26px;
+    display: -ms-grid;
+    -ms-grid-columns: 55.208vw 3.819vw 22.917vw;
+    -ms-grid-rows: 8.128544423440454vh auto 1fr;
+
+    & .section-left {
+      grid-area: TwoCol__FeaturedImg;
+      -ms-grid-row: 2;
+      -ms-grid-row-span: 2;
+      -ms-grid-column: 1;
+
+      &__featuredImage {
+        height: 100%;
+
+        .global__image {
+          /*max-height: 100%;*/
+          object-fit: cover;
+        }
+      }
+    }
+
+    & .global-title {
+      grid-area: TwoCol__Title;
+      padding-top: 34px;
+      min-width: 343px;
+      -ms-grid-row: 2;
+      -ms-grid-column: 3;
+    }
+
+    & .section-right {
+      grid-area: TwoCol__Content;
+      max-width: 500px;
+      margin: 0 auto;
+      -ms-grid-row: 3;
+      -ms-grid-column: 3;
+
+      form {
+        .password-show {
+          display: block;
+          position: absolute;
+          cursor: pointer;
+          width: 26px;
+          height: 24px;
+          overflow: hidden;
+          top: 15px;
+          left: 90%;
+          border: 0;
+          padding: 0;
+          background: url('../../../assets/images/Password_show.svg') no-repeat bottom 8px right;
+          outline: none;
+        }
+
+        .password-hide {
+          display: block;
+          position: absolute;
+          cursor: pointer;
+          width: 26px;
+          height: 24px;
+          overflow: hidden;
+          top: 14px;
+          left: 90%;
+          border: 0;
+          padding: 0;
+          background: url('../../../assets/images/Password_Hide.svg') no-repeat bottom 4px right;
+          outline: none;
+        }
+      }
+
+      .ms-field {
+        margin-top: 48px;
+
+        & .ms-input {
+          opacity: 1;
+        }
+      }
+
+      & .has-error {
+        color: var(--plum-primary);
+        @include font-family-size(14px, normal);
+
+        .ms-input:focus ~ .ms-label, .ms-input:valid ~ .ms-label, .ms-label-invalid {
+          color: var(--plum-primary);
+        }
+
+        &.failed {
+          text-align: center;
+          margin-top: 20px;
+        }
+      }
+    }
+  }
+}
+
+@media all and (max-width: 919px) {
+  .page-body {
+
+    & .sections {
+      display: -ms-grid;
+      -ms-grid-columns: 6.400vw 1fr 6.400vw;
+      -ms-grid-rows: auto 54px 35vh auto;
+
+      & .global-title {
+        justify-self: center;
+        -ms-grid-row: 1;
+        -ms-grid-column: 2;
+      }
+
+      & .section-left {
+        -ms-grid-row: 3;
+        -ms-grid-column: 1;
+        -ms-grid-column-span: 3;
+
+        &__featuredImage {
+          text-align: center;
+        }
+      }
+
+      & .section-right {
+        -ms-grid-row: 4;
+        -ms-grid-column: 2;
+      }
+    }
+  }
+}
+
+@media all and (max-width: 576px) {
+  .page-body {
+
+    & .sections {
+      align-content: center;
+      margin-top: 0px;
+
+      & .global-title {
+        justify-content: center;
+      }
+    }
+  }
+}

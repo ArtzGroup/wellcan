@@ -1,0 +1,39 @@
+:root {
+    --hero__columns: 1fr;
+    --hero__rows: 3.4482758620689653vh auto auto 1fr;
+    --hero__areas:
+    " . "
+    " title "
+    " loginCTA "
+    " . ";
+
+    --hero__columns--ms: [col1-start] 1fr [col1-end];
+    --hero__rows--ms: auto auto;
+
+    @media screen and (min-width: 920px) { 
+        --hero__columns: 9.931vw 1fr;
+        --hero__rows: 10.6015625vh auto auto 1fr;
+        --hero__areas:
+        " . . "
+        " . title "
+        " . loginCTA "
+        " . . ";
+
+      
+    }
+
+    @media screen and (min-width: 690px) { 
+        --hero__columns: 9.931vw 1fr;
+        --hero__rows: 2.6015625vh auto auto 1fr;
+        --hero__areas:
+        " . . "
+        " . title "
+        " . loginCTA "
+        " . . ";  
+    }
+    
+    @media screen and (min-width: 767px) { 
+        --hero__columns--ms: [col1-start] 10vw [col1-end col2-start] 25.375vw [col2-end col3-start] 10.278vw [col3-end col4-start] 53.264vw [col4-end col5-start] 1fr[col5-end];
+        --hero__rows--ms: auto auto auto;
+    }
+}

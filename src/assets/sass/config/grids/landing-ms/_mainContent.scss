@@ -1,0 +1,19 @@
+:root {
+    --mainContent__cols: 1fr;
+    --mainContent__rows: auto;
+    --mainContent__areas:
+    " landing__whatIs "
+    " landing__howAbilitiWorks "
+    " landing__howMuchReimbursed "
+    " landing__isConfidential "
+    " landing__whoTherapists ";
+
+    @media screen and (min-width: 920px) {
+        --mainContent__cols: 1fr 1fr;
+        --mainContent__areas:
+        " landing__whatIs landing__whatIs "
+        " landing__howAbilitiWorks landing__howAbilitiWorks "
+        " landing__howMuchReimbursed landing__howMuchReimbursed "
+        " landing__isConfidential landing__whoTherapists";
+    }
+}

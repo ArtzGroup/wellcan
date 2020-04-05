@@ -1,0 +1,27 @@
+:root {
+    // iCBT Main Brand Colours
+    --brand-color-1: #00308F;
+    --brand-color-2: #446FC8;
+    --brand-color-3: #28E6E1;
+    --brand-color-4: #F5F8FF;
+
+    --greyscale-dark-2: #5A5C5F;
+
+    --text-color: #313235;
+    --text-color__light: #ffffff;
+
+    --buttonColor: var(--brand-color-1);
+    --buttonColor__hover: #3769c8;
+    --buttonTextColor: var(--brand-color-3);
+    --buttonTextColor__hover: #ffffff;
+}
+
+.color--brand1 {
+    color: var(--brand-color-1);
+}
+.color--brand2 {
+    color: var(--brand-color-2);
+}
+.color--brand3 {
+    color: var(--brand-color-3);
+}

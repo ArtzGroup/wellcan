@@ -1,0 +1,97 @@
+.hero--ms {
+    grid-template-columns: var(--hero__columns--ms);
+    grid-template-rows: var(--hero__rows--ms);
+    grid-template-areas: inherit;
+    height: auto;
+    margin-top: 0;
+    background-size: cover;
+    background: url('../images/backgrounds/circles-and-diamonds.svg') bottom left no-repeat;
+    
+    @media screen and (min-width: 767px) {
+        -ms-grid-columns: 5vw 1fr 1fr 5vw;
+    }
+    
+    .hero--ms__wrapper {
+        grid-column: col1;
+        grid-row: 2;
+
+        @media screen and (min-width: 767px) {
+        grid-column: col1 / span 2;
+        grid-row: 1;
+        -ms-grid-column: 2;
+        -ms-grid-column-span: 1;
+        margin-bottom: 40px;
+        }
+ 
+        
+        @media screen and (min-width: 920px) {
+        grid-column: col2 / span 2;
+        grid-row: 2;
+        -ms-grid-column: 2;
+        -ms-grid-column-span: 1;
+    
+        background-size: 100%;
+        }
+
+        .hero__paragraph {
+        font-style: normal;
+        font-weight: 600;
+        font-size: 165%;
+        line-height: 150.3%;
+        }
+
+        .hero__paragraph--astrisks {
+            font-style: normal;
+            font-weight: normal;
+            font-size: 50%;
+            line-height: 14px;
+            vertical-align: top;
+            position: relative;
+            // left: -5%;
+            top: 10px;
+        }
+
+        .hero__paragraph--small {
+        font-style: normal;
+        font-weight: normal;
+        font-size: 95%;
+        line-height: 14px;
+        }
+
+        .hero__price {
+        font-weight: 800;
+        font-size: 444%;
+        line-height: 100%;
+        margin: -25px 0 -10px;
+        padding: 0;
+        }
+    }
+
+    .hero--ms__featuredImg {
+        grid-column: col1;
+        grid-row: 1;
+        max-width: 100%;
+        width: 95%;
+
+        @media screen and (min-width: 767px) {
+        grid-column: col3 / span 2;
+        grid-row: 1 / span 3;
+
+        -ms-grid-column: 3;
+        -ms-grid-column-span: 2;
+        }
+    }
+    }
+
+    @media screen and (min-width: 1440px) {
+
+    }
+
+    .hero--ms .hero--ms__featuredImg--download {
+
+        @media screen and (min-width: 767px) {
+            grid-column: col4;
+            -ms-grid-column: 4;
+        }
+ 
+    } 

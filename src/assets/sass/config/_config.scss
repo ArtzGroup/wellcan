@@ -1,0 +1,11 @@
+:root {
+    --display_item: none; // Hide element.
+
+    @media screen and (min-width: 767px) {
+        --display_item: block; // Show element.
+    }
+}
+
+@import 'colors';
+@import 'fonts';  
+@import 'grids';     

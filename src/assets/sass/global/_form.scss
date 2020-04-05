@@ -1,0 +1,28 @@
+.global__form {
+  padding:0 40px;
+
+  .form__label {
+    color:var(--greyscale-dark-2);
+    font-size:0.875rem;
+    line-height: 1.313rem;
+    margin-top:15px;
+  }
+
+  .form__textInput, .form__textArea {
+    border:none;
+    outline:none;
+    width:100%;
+    font-size:0.875rem;
+  }
+
+  .form__textInput--icbt {
+    border-bottom: 2px solid var(--brand-color-1);
+    line-height:2rem;
+  }
+
+  .form__textArea--icbt {
+    background:#fff;
+    box-shadow: -2px 2px 8px rgba(0, 0, 0, 0.25);
+    line-height:1.4rem;
+  }
+}

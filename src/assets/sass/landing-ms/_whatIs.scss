@@ -1,0 +1,22 @@
+
+// Morneau Shepell Landing
+.landing__whatIs--ms {
+    grid-template-columns: var(--whatIs__columns--ms);
+    grid-template-rows: var(--whatIs__rows--ms);
+    grid-template-areas: var(--whatIs__areas--ms);
+}
+
+
+.whatIsCBT__wrapper {
+    grid-area: whatIsCBT__wrapper;
+}
+
+.whatIsICBT__wrapper {
+    grid-area: whatIsICBT__wrapper;
+    padding-top: 2rem;
+}
+
+.landing__whatIs--ms .whatIs__plant1 {
+    max-width: 130%;
+    margin: 0;
+}

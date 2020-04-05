@@ -1,0 +1,43 @@
+@import "../mixins.scss";
+
+.global__button {
+  display: table;
+  font-weight: 600;
+  text-decoration: none;
+  font-size: var(--buttonFontSize);
+  line-height: var(--buttonLineHeight);
+  border-radius: 100px;
+  padding: 15px 45px;
+  width: max-content;
+  cursor: pointer;
+  transition: background 0.2s ease-in-out, color 0.2s ease-in-out;
+  text-align: center;
+  color: var(--bc_ssp-blue-primary);//#002680
+  background: var(--bc_ssp-yellow-primary); // #FFD800;
+  margin: 0.9375rem 0; //15px 0;
+  border: transparent;
+
+  &:hover {
+    // background: var(--buttonColor__hover);
+    // color: var(--buttonTextColor__hover);
+  }
+
+  &.global__button--full-width {
+    width: 100%;
+  }
+}
+
+.form-button {
+  display: block;
+  background-color: var(--brand-color-1);
+  color: var(--brand-color-3);
+  @include font-family-size(16px, normal);
+  border-radius: 100px;
+  line-height: 25px;
+  border: none;
+  padding: 10px 60px;
+  cursor: pointer;
+  margin: 32px 0;
+  width: 100%;
+  overflow: hidden;
+}

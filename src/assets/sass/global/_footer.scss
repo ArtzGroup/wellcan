@@ -1,0 +1,78 @@
+.global__footer {  
+    // Place the Footer
+    grid-area: global__footer;
+
+
+    //Control the inside of the footer
+    display: grid;  
+    grid-template-columns: var(--footer__columns);
+    grid-template-rows: var(--footer__rows);
+    grid-template-areas: var(--footer__areas);
+    position: relative; 
+    margin: 0 0;
+    padding: 0 1rem 1rem;
+    background:#275DC8;
+    background: linear-gradient(127.42deg, #275DC8 9.75%, #00308F 114.18%);
+    border-radius: 40px 0px 0px 0; 
+
+    .footer_aboutMorneau {
+        grid-area: footer_aboutMorneau;
+        display: var(--display_item);
+
+        .global__header4 {
+            margin-bottom: 0;
+        }
+    }
+
+    .footer__menu__item {
+        font-size: 75%;
+        line-height: 1rem;
+        font-weight: 600;
+        text-decoration: none;
+
+        &.footer__menu__item--light {
+            color: var(--text-color__light);
+
+            &:hover {
+                color: var(--brand-color-3);
+            }
+        }
+    }
+    
+    .footer__menu {
+        display: block;
+        grid-area: footer__menu;
+        padding-top: 4.5rem;
+        
+
+        @media screen and (min-width: 767px) and (max-width: 919px) {
+            align-self: center;
+        }
+
+        .footer__menu__item {
+            display: block;
+            margin-bottom: 1.375rem;
+
+            @media screen and (min-width: 767px) and (max-width: 919px) {
+                display: inline-block;
+                margin-right: 1.375rem;
+                margin-bottom: 0;
+                justify-self: center;
+            }
+        } 
+    }
+
+    .footer__terms {
+        grid-area: footer__terms;
+
+        .footer__copyright {
+            display: inline-block;
+            font-size: 75%;
+            line-height: 1rem;
+        }
+
+        .footer__menu__item {
+            margin-left: 1.563rem;
+        }
+    }
+}

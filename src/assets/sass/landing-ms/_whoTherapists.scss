@@ -1,0 +1,23 @@
+.landing__whoTherapists {
+    grid-area: landing__whoTherapists;
+    overflow: hidden;
+    display: grid;
+    grid-template-columns: var(--whoTherapists__columns);
+    grid-template-rows: var(--whoTherapists__rows);
+    grid-template-areas: var(--whoTherapists__areas);
+    padding: 0 16px;
+    margin-bottom: 5.125rem;
+    margin-top: 3.25rem;
+
+  
+
+    .whoTherapists__wrapper {
+        grid-area: whoTherapists__wrapper;
+    }
+
+    .global__bullet-list {
+        padding-left: 1em;
+        padding-right: 1em; 
+    }
+
+}

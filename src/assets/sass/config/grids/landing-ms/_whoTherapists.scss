@@ -1,0 +1,15 @@
+:root {
+    --whoTherapists__columns: 1fr;
+    --whoTherapists__rows: auto;
+    --whoTherapists__areas:
+    " whoTherapists__wrapper ";
+
+    @media screen and (min-width: 920px) {
+        --whoTherapists__columns: 4.778vw 1fr 7.736vw;
+        --whoTherapists__rows: auto;
+        --whoTherapists__areas:
+        " . whoTherapists__wrapper . ";
+    }
+}
+
+// 

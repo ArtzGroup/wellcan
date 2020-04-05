@@ -1,0 +1,146 @@
+@import 'config/_config'; 
+
+/* autoprefixer grid: on */
+ 
+* {
+    box-sizing: border-box;   
+}  
+ 
+img {     
+    width: 100%;  
+
+    @media all and (-ms-high-contrast:none)
+     {
+        height: 100%;
+     }
+}    
+    
+body {   
+    background: #fafafa;
+    font-family: var(--primaryFont);
+    font-size: 100%; 
+    margin: 0;     
+    padding: 0;   
+    
+    @media screen and (min-width: 1440px) {
+      font-size: 1.25vw; 
+    }
+}       
+   
+.landing {  
+    display: grid;    
+    grid-template-columns: var(--landing__columns);    
+    grid-template-rows: var(--landing__rows);
+    grid-template-areas: var(--landing__areas);  
+} 
+ 
+.global__link {
+    color: var(--brand-color-1);
+    font-weight: 700;  
+
+    &:hover, &:active {
+      color: var(--brand-color-2);
+    }
+}
+
+.global__break { 
+    display: block;  
+}
+
+.global__mobileOnly {
+  display: block;
+
+  @media screen and (min-width: 767px) {
+    display: none;
+  } 
+}
+  
+.global__header { 
+    grid-area: global__header;
+    background: var(--brand-color-4);
+    padding: 25px 16px;
+
+    img {
+      max-width: 150%;
+      width: 8vw;
+    }
+
+
+    @media screen and (min-width: 690px) {
+        background: none;
+        padding: 35px 24px;
+    }
+
+    .header__menu {
+        display: none;
+    }
+}
+
+@import 'global/button';
+@import 'global/form';
+@import 'global/header';
+
+// Landing
+@import 'landing/hero';   
+@import 'landing/whatIs';  
+@import 'landing/features';   
+@import 'landing/howItWorks';
+
+// Landing Morneau Shepell
+
+.landing__mainContent { 
+  display: grid;
+  grid-template-columns: var(--mainContent__cols);
+  grid-template-rows: var(--mainContent__rows);
+  grid-template-areas: var(--mainContent__areas);
+}
+
+@import 'landing-ms/hero';   // Extends landing/_hero.scss
+@import 'landing-ms/whatIs';  // Extends landing/_whatIs.scss
+@import 'landing-ms/howAbilitiWorks';
+@import 'landing-ms/howMuchReimbursed';
+@import 'landing-ms/isConfidential';
+@import 'landing-ms/whoTherapists';
+
+// Temp Programs Page
+@import 'programs/hero-programs'; 
+@import 'programs/programs';
+
+
+@import 'contact/contact-page';    
+@import 'global/footer';    
+ 
+ 
+@keyframes fadeIn {
+    0% {
+      transform: scale(0.1);
+      opacity: 0; 
+      transform:translateY(120px);
+    }
+    60% {
+      transform: scale(1.1);
+      opacity: 1;
+      transform:translateY(120px); 
+    }
+    100% { 
+      transform: scale(1);
+      transform:translateY(0);
+    }
+  } 
+
+  @keyframes fadeInDelayed {
+      0% {
+          opacity: 0;
+          transform: scale(0.1);
+      }
+      50% {
+        transform: scale(0.011);
+      }
+      90% {
+        transform: scale(1.1);
+        opacity: 1;
+      }
+      100% { 
+        transform: scale(1);
+      }
+    }

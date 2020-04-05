@@ -1,0 +1,55 @@
+
+// landing
+.hero {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-content: center;
+    text-align: center;
+    height: 100vh;
+    background: var(--brand-color-4)  center center no-repeat;
+    background-size: cover;
+    background-image: url('../images/landing/hero-bg.jpg');
+
+    @media screen and (max-width: 767px) {
+        padding: 0 40px;
+    }   
+
+    h1 {
+        animation: fadeIn 2s;
+    }
+
+    .hero__paragraph {
+        font-size: 2.222vw;
+        max-width: 54.042vw;
+        align-self: center;
+        text-shadow: 10px 0 28px #1C1C1C; 
+        animation: fadeInDelayed 3s;  
+
+        @media screen and (max-width: 767px) {
+            font-size: 34px;
+            padding: 20px 0;
+            max-width: 100%;
+        } 
+    }
+}
+.menu-items {
+    display: grid;
+    overflow: hidden;
+    grid-template-columns: var(--landingColumns);
+    grid-template-rows: var(--landingRows);
+    grid-template-areas: var(--landingAreas);
+
+    .intro { 
+        grid-area: logo; 
+        
+        h1 {
+            margin-bottom: 0;
+            padding-bottom: 0;
+        }
+
+        .global__paragraph {
+            font-size: 1.2vw;
+        }
+    }
+}

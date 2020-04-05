@@ -1,0 +1,107 @@
+:root {
+  --primaryFont: 'Open Sans', sans-serif;
+  // Header 1
+  --header1Size: 225%; // 36px
+  --header1LineHeight: 119.444%; // 43px
+  // Header 2
+  --header2Size: 150%; // 24px
+  --header2LineHeight: 120.833%; // 29px
+  // Header 3
+  --header3Size: 131.25%; // 21px
+  --header3LineHeight: 119.048%; // 25px
+  // Header 4
+  --header4Size: 87.5%; // 14px
+  --header4LineHeight: 135.714%; // 19px
+  --buttonFontSize: 112.5%; // 18px
+  --buttonLineHeight: 122.222%; // 22px
+
+  //Hero large fonts
+  --heroLargeFont: 2.625em;
+}
+
+.global__header1 {
+    font-family: var(--primaryFont);
+    font-weight: 800;
+    font-size: var(--header1Size);
+    line-height: var(--header1LineHeight);
+}
+
+.global__header2 {
+    font-family: var(--primaryFont);
+    font-weight: bold;
+    font-size: var(--header2Size);
+    line-height: var(--header2LineHeight);
+}
+
+.global__header3 {
+    font-family: var(--primaryFont);
+    font-weight: bold;
+    font-size: var(--header3Size);
+    line-height: var(--header3LineHeight);
+}
+
+.global__header4 {
+    font-family: var(--primaryFont);
+    font-weight: normal;
+    font-size: var(--header4Size);
+    line-height: var(--header4LineHeight);
+
+    &.global__header4--light {
+        color: var(--text-color__light);
+    }
+}
+
+.global__paragraph {
+    font-family: var(--primaryFont);
+    font-size: 100%;
+    color: var(--text-color);
+    font-weight: normal;
+    line-height: 24px;
+
+    &.global__paragraph--light {
+        color: var(--text-color__light);
+    }
+
+    &.global__paragraph--small {
+        font-size: 75.0%;
+        line-height: 140%;
+    }
+}
+
+.global__bullet-list {
+    font-family: var(--primaryFont);
+    font-size: 100%;
+    color: var(--text-color);
+    font-weight: normal;
+    line-height: 24px;
+    list-style: none;
+
+    .bullet-list__list-item {
+        display: flex;
+        margin-bottom: 30px;
+
+        &:before {
+            display: block;
+            margin-top: 6px;
+            content: "";
+            width: 14px;
+            height: 14px;
+            padding-right: 16px;
+            // background: url('../../images/global/bullet.svg') top left no-repeat;
+        }
+    }
+
+    &.global__bullet-list--light {
+        color: var(--text-color__light);
+    }
+}
+
+.global__hero {
+  font-family: var(--primaryFont);
+  font-weight: 800;
+  line-height: var(--header1LineHeight);
+
+  &.global__hero--large{
+    font-size: var(--heroLargeFont);
+  }
+}

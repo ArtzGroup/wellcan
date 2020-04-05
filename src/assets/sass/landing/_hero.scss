@@ -1,0 +1,125 @@
+.hero {
+    // Place .hero onto site Grid
+    grid-area: landing__hero;
+    padding: 0 16px;
+    margin-top: 6.773399014778325vh; // 55px
+
+    // Animation
+    animation: fade-in 2s 0.5s cubic-bezier(0, 0.5, 0, 1) forwards;
+    opacity: 0;
+
+
+    // Set inside of .hero
+    display: grid;
+    grid-template-columns: var(--hero__columns);
+    grid-template-rows: var(--hero__rows);
+    grid-template-areas: var(--hero__areas);
+    height: 77.3399014778325vh;
+
+    background: url('../images/landing/hero-mobile.svg') bottom center no-repeat;
+    background-size: cover;
+
+    @media screen and (min-width: 630px) {
+        background: url('../images/landing/hero-full.svg') bottom right -100px no-repeat;
+        background-size: contain;
+    }
+
+    @media screen and (min-width: 690px) {
+        background-position: top right;
+        background-size: contain;
+        height: 32.08203125vh;
+        margin-top: 0;
+    }
+
+    @media screen and (min-width: 920px) {
+        height: 47.08203125vh;
+        background-size: contain;
+        background-position: center top;
+    }
+
+    @media screen and (min-width: 1175px) {
+        height: 56.08203125vh;
+    }
+
+    @media screen and (min-width: 1400px) {
+        height: 65.08203125vh;
+    }
+
+    @media screen and (min-width: 1450px) {
+        height: 65.08203125vh;
+        background-position: top center;
+        background-size: 100%;
+    }
+
+
+    .global__header1 {
+        grid-area: title;
+        margin: 0;
+        max-width: 565px;
+        animation: pop-in 1s cubic-bezier(0, 0.9, 0.3, 1.2) forwards;
+        animation-delay: .8s;
+        opacity: 0;
+        
+        @media screen and (min-width: 550px) {
+            max-width: 60%;
+        }
+        
+        @media screen and (min-width: 767px) {
+            max-width: 39.236vw;
+        }
+        @media screen and (min-width: 920px) {
+            max-width: 39.236vw;
+        }
+    }
+
+    .global__button {
+        grid-area: loginCTA;
+        margin-top: 24px;
+        animation: pop-down 1.2s cubic-bezier(0, 0.9, 0.3, 1.2) forwards;
+        animation-delay: 1.4s;
+        opacity: 0;
+    }
+
+  }
+ 
+   
+
+/* Animations */
+
+@keyframes fade-in {
+    0% {
+      opacity: 0;
+    //   transform: translateY(-100vh);
+    }
+    100% {
+      opacity: 1;
+    //   transform: none;
+    }
+  }
+  
+  @keyframes pop-in {
+    0% {
+      opacity: 0;
+      transform: translateY(-4rem) scale(.8);
+    }
+    100% {
+      opacity: 1;
+      transform: none;
+    }
+  }
+  
+  @keyframes pop-down {
+    0% {
+      opacity: 0;
+      transform: translateY(4rem) scale(.8);
+    }
+    100% {
+      opacity: 1;
+      transform: none;
+    }
+  }
+
+  @-webkit-keyframes slide {
+    from { background-position: 0 0; }
+    to { background-position: -400px 0; }
+}

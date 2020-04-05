@@ -1,0 +1,16 @@
+:root {
+    --howMuchReimbursed__columns: 1fr;
+    --howMuchReimbursed__rows: auto;
+    --howMuchReimbursed__areas:
+    " howMuchReimbursed__wrapper "
+    " features__feature3--img ";
+
+    @media screen and (min-width: 920px) {
+        --howMuchReimbursed__columns: 9.861vw 32.708vw 3.333vw 51.042vw;
+        --howMuchReimbursed__rows: auto;
+        --howMuchReimbursed__areas:
+        " . howMuchReimbursed__wrapper . features__feature3--img";
+    }
+}
+
+// 

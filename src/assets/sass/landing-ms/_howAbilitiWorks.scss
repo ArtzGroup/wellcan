@@ -1,0 +1,27 @@
+.landing__howAbilitiWorks {
+    grid-area: landing__howAbilitiWorks;
+    overflow: hidden;
+    display: grid;
+    grid-template-columns: var(--howAbilitiWorks__columns);
+    grid-template-rows: var(--howAbilitiWorks__rows);
+    grid-template-areas: var(--howAbilitiWorks__areas);
+    padding: 0 16px;
+    margin-bottom: 5.125rem;
+    margin-top: 3.25rem;
+
+    .howAbilitiWorks__wrapper {
+        grid-area: howAbilitiWorks__wrapper;
+    }
+
+    .global__bullet-list {
+        padding-left: 1em;
+        padding-right: 1em; 
+    }
+
+
+    .features__feature2--img {
+        grid-area: features__feature2--img;
+        align-self: center;
+    }
+
+}

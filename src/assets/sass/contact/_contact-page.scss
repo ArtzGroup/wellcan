@@ -1,0 +1,33 @@
+.contact__content {
+    // margin-top:3%;
+    display: grid;
+    grid-template-columns: var(--contact__columns);
+    grid-template-rows: var(--contact__rows);
+    grid-template-areas: var(--contact__areas);
+    justify-items: center;
+
+    .contact__form {
+      grid-area: contact__form;
+    }
+
+    .envelope__image {
+      grid-area: envelope__image;
+      justify-self: center;
+    }
+
+    .square__image {
+      grid-area: square__image;
+      justify-self: center;
+      align-self: center;
+    }
+}
+
+@media screen and (max-width: 960px) {
+    .square__image {
+      display:none;
+    }
+
+    .envelope__image {
+      max-width: 436px;
+    }
+  }

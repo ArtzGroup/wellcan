@@ -1,0 +1,25 @@
+.landing__isConfidential {
+    grid-area: landing__isConfidential;
+    overflow: hidden;
+    display: grid;
+    grid-template-columns: var(--isConfidential__columns);
+    grid-template-rows: var(--isConfidential__rows);
+    grid-template-areas: var(--isConfidential__areas);
+    padding: 0 16px;
+    margin-bottom: 5.125rem;
+    margin-top: 3.25rem;
+
+    .isConfidential__wrapper {
+        grid-area: isConfidential__wrapper;
+    }
+
+    .global__bullet-list {
+        padding-left: 1em;
+        padding-right: 1em; 
+    }
+
+    .features__feature4--img {
+        grid-area: features__feature4--img;
+    }
+
+}

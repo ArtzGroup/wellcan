@@ -1,0 +1,25 @@
+.landing__howMuchReimbursed {
+    grid-area: landing__howMuchReimbursed;
+    overflow: hidden;
+    display: grid;
+    grid-template-columns: var(--howMuchReimbursed__columns);
+    grid-template-rows: var(--howMuchReimbursed__rows);
+    grid-template-areas: var(--howMuchReimbursed__areas);
+    padding: 0 16px;
+    margin-bottom: 5.125rem;
+    margin-top: 3.25rem;
+
+    .howMuchReimbursed__wrapper {
+        grid-area: howMuchReimbursed__wrapper;
+    }
+
+    .global__bullet-list {
+        padding-left: 1em;
+        padding-right: 1em; 
+    }
+
+    .features__feature3--img {
+        grid-area: features__feature3--img;
+    }
+
+}

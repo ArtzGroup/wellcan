@@ -1,0 +1,55 @@
+:root {
+    // What Is Section
+    --whatIs__columns: 1fr;
+    --whatIs__rows: auto;
+    --whatIs__areas:
+    " whatIs__wrapper "
+    " whatIs__plant1 " 
+    " whatIs__plant2 ";
+
+
+    // MS Landing
+    --whatIs__columns--ms: 1fr;
+    --whatIs__rows--ms: auto;
+    --whatIs__areas--ms:
+    " whatIsCBT__wrapper "
+    " whatIsICBT__wrapper "
+    " whatIs__plant1 " 
+    " whatIs__plant2 ";
+
+    
+
+    @media screen and (min-width: 767px) {
+        --whatIs__columns: 15.833vw 5.069vw 1fr 5.069vw 19.792vw;
+        // --whatIs__rows: 1.8780550553125805vh 4.785181373810136vh 1.8780550553125805vh 3.1901209158734245vh 1.4149729868793415vh;
+        --whatIs__rows: 1fr 1.0033444816053512vh;
+        --whatIs__areas:
+        "whatIs__plant2 whatIs__plant2 whatIs__wrapper whatIs__wrapper whatIs__wrapper"
+        " whatIs__plant2 whatIs__plant2 whatIs__wrapper whatIs__wrapper whatIs__wrapper ";
+
+
+         // MS Landing
+        --whatIs__columns--ms: 0.556vw 15.069vw 2.431vw 54.931vw 8.403vw 1fr;
+        --whatIs__rows--ms: auto auto auto 1fr;
+        --whatIs__areas--ms:
+        " . whatIs__plant2 whatIs__plant2 whatIsCBT__wrapper whatIsCBT__wrapper ."
+        " . whatIs__plant2 whatIs__plant2 . . . "
+        " . whatIs__plant2 whatIs__plant2  whatIsICBT__wrapper whatIsICBT__wrapper . " 
+        " . . . whatIsICBT__wrapper whatIsICBT__wrapper . ";
+
+    }
+
+    @media screen and (min-width: 920px) {
+        --whatIs__areas:
+        "whatIs__plant2 . whatIs__wrapper whatIs__plant1 whatIs__plant1"
+        " whatIs__plant2 . whatIs__wrapper . . ";
+
+        // MS Landing
+
+        --whatIs__areas--ms:
+        " . whatIs__plant2 . whatIsCBT__wrapper . whatIs__plant1"
+        " . . . . . whatIs__plant1 "
+        " . . .  whatIsICBT__wrapper . whatIs__plant1";
+    }
+    
+} 
