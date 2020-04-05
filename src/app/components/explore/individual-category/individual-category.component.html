@@ -19,7 +19,8 @@
                 <p class="category_article-paragraph global__paragraph" [innerHTML]="cleanHTML(article.content)"> </p>
                 <a type="link" class="read_article_btn" tabindex="0"
                   (click)="onReadArticle( selectedCategory.articles[i].id)">
-                  <img src="../../../../assets/images/explore/read_article_right_arrow.svg" alt="right-arrow">
+                  <img class="img" src="../../../../assets/images/explore/read_article_right_arrow.svg"
+                    alt="right-arrow">
                   Read Article
                 </a>
               </div>
@@ -48,7 +49,8 @@
               <div class="category_article-body">
                 <h3 class="category_article-title global_header3">{{article.title}}</h3>
                 <a type="link" class="read_article_btn" tabindex="0" (click)="onReadArticle(article.id)">
-                  <img src="../../../../assets/images/explore/read_article_right_arrow.svg" alt="right-arrow">
+                  <img class="img" src="../../../../assets/images/explore/read_article_right_arrow.svg"
+                    alt="right-arrow">
                   Read Article
                 </a>
               </div>

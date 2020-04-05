@@ -6,6 +6,8 @@ import { FaqComponent } from './components/faq/faq.component';
 import { SupportComponent } from './components/support/support.component';
 
 const routes: Routes = [
+  { path: '', component: HomeComponent, data: { title: 'Home Page' } },
+
   { path: 'home', component: HomeComponent, data: { title: 'Home Page' } },
   {
     path: 'downloadapp',
