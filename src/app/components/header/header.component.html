@@ -1,52 +1,29 @@
 <div class="global__header">
 
     <div class="header-menu">
-        <!--<a *ngIf="show_menu != 'expanded'" [routerLink]="'/landing'">
-        <img *ngIf="lang == 'en'" src="assets/images/logos/logo--abilitiCBT.svg" alt="Morneau Shepell" class="logo" />
-        <img *ngIf="lang == 'fr'" src="assets/images/logos/logo--abilitiCBT_FR.svg" alt="Morneau Shepell" class="logo" />
-      </a>-->
         <a [routerLink]="'/home'">
             <img src="../../../assets/images/logos/wellcan-logo.svg" alt="Morneau Shepell" class="logo" />
         </a>
 
-        <nav class="menu-items">
-            <a [routerLink]="'/home'" [routerLinkActive]="['selected']" class="menu-item">Home</a>
-            <a [routerLink]="'/downloadapp'" [routerLinkActive]="['selected']" class="menu-item">Download the
-                App</a>
-            <a [routerLink]="'/explore'" [routerLinkActive]="['selected']"
-                class="menu-item">Explore</a>
-            <a [routerLink]="'/support'" [routerLinkActive]="['selected']" class="menu-item">Support</a>
-            <a [routerLink]="'/faq'" [routerLinkActive]="['selected']" class="menu-item">FAQ</a>
-            <!-- <language-selector></language-selector> -->
-        </nav> 
 
-        <div class="mobile-menu">
-            <input type="checkbox" id="hamburger" />
-            <label for="hamburger"></label>
-            <div class="menu-open">
-                <div class="menuWrapper">
-                    <nav class="menu">
-                        <a [routerLink]="'/home'" [routerLinkActive]="['selected']" class="menu-item">Home</a>
-                        <a [routerLink]="'/downloadapp'" [routerLinkActive]="['selected']"
-                            class="menu-item">Download the App</a>
-                        <a [routerLink]="'/explore'" [routerLinkActive]="['selected']"
-                            class="menu-item">Explore</a>
-                        <!-- <a [routerLink]="'/support'" [routerLinkActive]="['selected']"
-                            class="menu-item contact">Support</a> -->
-                        <a [routerLink]="'/faq'" [routerLinkActive]="['selected']" class="menu-item">FAQ</a>
+        <div class="menu">
+            <nav class="languageMenu">
+                <a href="#">Françias</a> 
+            </nav>
 
-                        <!-- <span class="help-title">{{'header.HELPANDSETTINGS' | translate}}</span>
-                        <a (click)="toggleMobileMenu()"
-                            class="menu-item language-link">{{'header.Language' | translate}}</a> -->
-                    </nav>
-                    <!-- 
-                    <nav class="languageMenu">
-                        <language-selector (toggleMobileMenu)="toggleMobileMenu()" [showMobileView]="true">
-                        </language-selector>
-                    </nav> -->
-
-                </div>
-            </div>
+            <nav class="menu-items">
+                <a [routerLink]="'/home'" [routerLinkActive]="['selected']" class="menu-item">Home</a>
+                <a [routerLink]="'/downloadapp'" [routerLinkActive]="['selected']" class="menu-item">Download the
+                    App</a>
+                <a [routerLink]="'/explore'" [routerLinkActive]="['selected']"
+                    class="menu-item">Explore</a>
+                <a [routerLink]="'/support'" [routerLinkActive]="['selected']" class="menu-item">Support</a>
+                <a [routerLink]="'/faq'" [routerLinkActive]="['selected']" class="menu-item">FAQ</a>
+                <!-- <language-selector></language-selector> -->
+                
+            </nav> 
         </div>
+
+        
     </div>
 </div>
