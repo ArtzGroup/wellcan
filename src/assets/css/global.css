@@ -596,7 +596,7 @@ body {
   }
 
     .languageMenu a {
-      font-size: 100%;
+      font-size: 75%;
       color: var(--brand-color-1);
     }
 
