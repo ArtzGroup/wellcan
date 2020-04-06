@@ -584,7 +584,7 @@ body {
 
   .languageMenu {
     font-size: 100%;
-    margin-bottom: 1rem;
+    margin-bottom: 1rem; 
     text-align: center;
   }
 
@@ -595,7 +595,7 @@ body {
     }
   }
 
-    .languageMenu a {
+    .languageMenu a { 
       font-size: 75%;
       color: var(--brand-color-1);
     }
