@@ -6,19 +6,19 @@
         <img *ngIf="lang == 'fr'" src="assets/images/logos/logo--abilitiCBT_FR.svg" alt="Morneau Shepell" class="logo" />
       </a>-->
         <a [routerLink]="'/home'">
-            <img src="../../../assets/images/header/wellcan_log-en.svg" alt="Morneau Shepell" class="logo" />
+            <img src="../../../assets/images/logos/wellcan-logo.svg" alt="Morneau Shepell" class="logo" />
         </a>
 
         <nav class="menu-items">
-            <a [routerLink]="'/home'" [routerLinkActive]="['selected']" class="menu-item home">Home</a>
-            <a [routerLink]="'/downloadapp'" [routerLinkActive]="['selected']" class="menu-item programs">Download the
+            <a [routerLink]="'/home'" [routerLinkActive]="['selected']" class="menu-item">Home</a>
+            <a [routerLink]="'/downloadapp'" [routerLinkActive]="['selected']" class="menu-item">Download the
                 App</a>
             <a [routerLink]="'/explore'" [routerLinkActive]="['selected']"
-                class="menu-item helpfulResources">Explore</a>
-            <a [routerLink]="'/support'" [routerLinkActive]="['selected']" class="menu-item support">Support</a>
-            <a [routerLink]="'/faq'" [routerLinkActive]="['selected']" class="menu-item contact">FAQ</a>
+                class="menu-item">Explore</a>
+            <a [routerLink]="'/support'" [routerLinkActive]="['selected']" class="menu-item">Support</a>
+            <a [routerLink]="'/faq'" [routerLinkActive]="['selected']" class="menu-item">FAQ</a>
             <!-- <language-selector></language-selector> -->
-        </nav>
+        </nav> 
 
         <div class="mobile-menu">
             <input type="checkbox" id="hamburger" />
@@ -26,14 +26,14 @@
             <div class="menu-open">
                 <div class="menuWrapper">
                     <nav class="menu">
-                        <a [routerLink]="'/home'" [routerLinkActive]="['selected']" class="menu-item home">Home</a>
+                        <a [routerLink]="'/home'" [routerLinkActive]="['selected']" class="menu-item">Home</a>
                         <a [routerLink]="'/downloadapp'" [routerLinkActive]="['selected']"
-                            class="menu-item programs">Download the App</a>
+                            class="menu-item">Download the App</a>
                         <a [routerLink]="'/explore'" [routerLinkActive]="['selected']"
-                            class="menu-item helpfulResources">Explore</a>
+                            class="menu-item">Explore</a>
                         <!-- <a [routerLink]="'/support'" [routerLinkActive]="['selected']"
                             class="menu-item contact">Support</a> -->
-                        <a [routerLink]="'/faq'" [routerLinkActive]="['selected']" class="menu-item contact">FAQ</a>
+                        <a [routerLink]="'/faq'" [routerLinkActive]="['selected']" class="menu-item">FAQ</a>
 
                         <!-- <span class="help-title">{{'header.HELPANDSETTINGS' | translate}}</span>
                         <a (click)="toggleMobileMenu()"
