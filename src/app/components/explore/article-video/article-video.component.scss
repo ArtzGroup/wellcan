@@ -1,4 +1,4 @@
-@import "../../../../assets/sass/explore/sass/config/_colors.scss";
+// @import "../../../../assets/sass/explore/sass/config/_colors.scss";
 
 .global__explore__article__page{
     display: flex;
@@ -8,7 +8,7 @@
     .article_img-section {
         min-height: calc(100vh - 110px);
         height: calc(100vh - 110px);
-        width: 100vw;
+        width: 100%;
 
         
         .category_article-img{
@@ -21,7 +21,7 @@
 
     .article_container-section {
         box-shadow: 0px 0px 23px rgba(197, 197, 197, 0.5);
-        background-color: var(--bc_ssp-white);
+        background-color: var(--text-color__light);
         width: 80vw;
         margin-bottom: 3.125rem; 
         border-radius: 0.625rem; 
@@ -29,19 +29,20 @@
         .article-element{
             padding: 3.125rem;  
 
+
             .global__button{
-                height: 3.125rem; 
                 display: flex;
                 justify-content: center;
                 align-items: center;
-                background-color: var(--bc_ssp-blue-light);
-                border: 1px solid var(--bc_ssp-blue-medium);
+                background-color: var(--brand-color-1);
+                border: 1px solid var(--brand-color-1);
+                font-size: 16px;
                 font-weight: bold;
-                color: var(--bc_ssp-blue-medium);
+                color: var(--text-color__light);
 
                 &:hover, &:focus {
-                    background-color: var(--bc_ssp-blue-medium);
-                    color: var(--bc_ssp-white);
+                    background-color: var(--brand-color-2);
+                    color: var(--text-color__light);
 
                 }
 
@@ -51,18 +52,29 @@
                 }
             }
 
-            .global__header1{
-                margin-top: 1.25rem; 
-                font-size: 2.625rem; 
-                line-height: 3.5625rem; 
-                letter-spacing: 0.216px;
-                margin-bottom: 1.25rem; 
-            }
 
             .article_content-wrapper{
+
+            
+                font-family: var(--primaryFont);
+                font-size: 100%;
+                color: var(--text-color);
+                font-weight: normal;
+                line-height: 2;
+            
+
                 .global__paragraph{
                     margin-bottom: 1.25rem; 
                 }
+
+
+            p {
+                font-family: var(--primaryFont);
+                font-size: 100%;
+                color: var(--text-color);
+                font-weight: normal;
+                line-height: 1.25;
+            }
             }
         }
     }

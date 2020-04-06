@@ -14,7 +14,7 @@ export class ExploreComponent implements OnInit {
   lang: any;
   language: boolean = true;
 
-  constructor(private exploreService: ExploreService) {}
+  constructor(private exploreService: ExploreService, public router: Router) {}
 
   ngOnInit() {}
 }
