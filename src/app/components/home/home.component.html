@@ -5,12 +5,14 @@
         <!-- <p class="hero__paragraph color--brand1">Start today and save</p>
         <h2 class="hero__price color--brand1">$125<span class="hero__paragraph hero__paragraph--astrisks">*</span></h2>
         <p class="hero__paragraph--small color--brand1">* Limited time offer</p> -->
-        <a href="https://morneaushepell.myicbt.com/programs" class="global__button global__button--primary">Download the
-            WellCan App</a>
+        <div class="downloadBtns">
+            <a href="#"><img src="assets/images/landing/download-on-app-store.png" class="app-download-apple" alt="Download on the App Store"></a>
+            <a href="#"><img src="assets/images/landing/google-play-badge.png" class="app-download-google" alt="Download on Google Play"></a>
+        </div>
     </div>
 
     <img src="assets/images/landing/hero-ms.svg" class="global_image hero--ms__featuredImg"
-        alt="Illustration of iCBT" />
+        alt="Illustration of WellCan" />
 </section>
 <div class="landing__mainContent">
     <section class="landing__whatIs landing__whatIs--ms">
@@ -48,7 +50,7 @@
             <br>
 
             <h2 class="global__header2 color--brand1 explore__title">Explore available resources</h2>
-            <p class="global__paragraph">WellCan’s <a href="#" class="global__link"><b>Explore</b></a> section offers a
+            <p class="global__paragraph">WellCan’s <a [routerLink]="'/explore'" class="global__link"><b>Explore</b></a> section offers a
                 number of useful resources available 24/7 to help you manage your well-being throughout the COVID-19
                 pandemic, including:</p>
             <ul class="global__bullet-list">
@@ -63,7 +65,7 @@
         </div>
 
         <img src="assets/images/landing/feature1-ms.svg" class="global_image features__feature2--img"
-            alt="Screenshot of the feedback" />
+            alt="Screenshot of an assessment" />
     </section>
 
     <section class="landing__isConfidential">
@@ -97,8 +99,10 @@
                 </li>
             </ul>
 
-            <a href="https://morneaushepell.myicbt.com/programs" class="global__button global__button--primary">Download
-                the WellCan App</a>
+            <div class="downloadBtns">
+                <a href="#"><img src="assets/images/landing/download-on-app-store.png" class="app-download-apple" alt="Download on the App Store"></a>
+                <a href="#"><img src="assets/images/landing/google-play-badge.png" class="app-download-google" alt="Download on Google Play"></a>
+            </div>
         </div>
 
     </section>
