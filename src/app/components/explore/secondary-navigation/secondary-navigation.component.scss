@@ -1,4 +1,4 @@
-@import "../../../../assets/sass/explore/sass/config/_colors.scss";
+// @import "../../../../assets/sass/explore/sass/config/_colors.scss";
 
 
 @mixin cf {
@@ -16,17 +16,17 @@
 .global__explore__secondary_navigation__page {
     display: flex;
     flex-direction: column;
-    justify-content: center;
-    align-items: center;
+    justify-content: flex-start;
+    align-items: flex-start;
     overflow: hidden;
-    padding: 1.25rem; 
+    padding: 1.25rem 5vw; 
 
-    .global__header1 {
-        color: var(--bc_ssp-blue-primary);
-        font-weight: 600;
-        font-size: 2.625rem; 
-        line-height: 3.125rem; 
-        margin-bottom: 1.25rem; 
+    @media screen and (min-width: 960px) {
+        padding: 1.25rem 10vw;
+    }
+
+    .header {
+        align-self: center;
     }
 
 
@@ -56,7 +56,7 @@
         }
     
         &::before {
-            border: 3px solid var(--bc_ssp-blue-primary);
+            border: 3px solid var(--brand-color-1);
             border-radius: 50%;
             width: 100%;
             height: 100%;
@@ -67,7 +67,7 @@
         &::after {
             height: 3px;
             width: 14px;
-            background: var(--bc_ssp-blue-primary);
+            background: var(--brand-color-1);
             top: 16px;
             left: 11px;
             transform: rotate(45deg);
@@ -84,7 +84,7 @@
                 top: -4px;
                 left: 9px;
                 height: 28px;
-                border-color: var(--bc_ssp-white);
+                border-color: var(--text-color__light);
             }
     
             &::after {
@@ -92,7 +92,7 @@
                 left: -4px;
                 top: 9px;
                 height: 2px;
-                background-color: var(--bc_ssp-white);
+                background-color: var(--text-color__light);
             }
         }
     }
@@ -123,6 +123,8 @@
             width: auto;
             min-height: 7.5vh;
             height: auto;
+            align-self: center;
+            justify-self: center;
     
           li {
             opacity: 1;
@@ -137,7 +139,7 @@
               display: block;
               padding-bottom: 0.5rem; 
               text-decoration: none;
-              color: var(--bc_ssp-blue-medium);
+              color: var(--brand-color-1);
               font-weight: normal;
               transition: all .5s;
               cursor: pointer;
@@ -154,7 +156,7 @@
                 width: 0%;
                 content: '.';
                 color: transparent;
-                background-color: var(--bc_ssp-blue-medium);
+                background-color: var(--brand-color-1);
                 height: 3px;
                 transition: all .5s;
               }

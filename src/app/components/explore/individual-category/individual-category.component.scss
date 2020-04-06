@@ -1,4 +1,4 @@
-@import "../../../../assets/sass/explore/sass/config/_colors.scss";
+// @import "../../../../assets/sass/explore/sass/config/_colors.scss";
 
 .img {
   width: auto !important;
@@ -22,7 +22,7 @@
         .global_header2 {
           font-weight: 600;
           line-height: 3.125rem;
-          color: var(--bc_ssp-blue-primary);
+          color: var(--brand-color-1);
           margin-bottom: 1.875rem;
         }
 
@@ -32,9 +32,10 @@
           flex-wrap: wrap;
 
           .category_article_card-div {
+            position: relative;
             max-width: 22.5rem;
-            box-shadow: 0px 0px 23px rgba(197, 197, 197, 0.5);
-            background-color: var(--bc_ssp-yellow-light-20);
+            box-shadow: -5px 2px 8px rgba(197, 197, 197, 0.5);
+            background: var(--text-color__light);
             margin-bottom: 2.5rem;
             display: flex;
             flex-direction: column;
@@ -52,6 +53,7 @@
               background-size: cover;
               background-position: center center;
               min-height: 275px;
+              border-radius: 8px 8px 0 0;
 
               iframe {
                 width: 100%;
@@ -60,40 +62,30 @@
             }
 
             .category_article-body {
-              padding: 1.25rem 1.25rem;
+              padding: 0 24px 24px;
               display: flex;
               flex-direction: column;
               flex: 1;
               justify-content: space-evenly;
 
-              .global_header3 {
-                font-weight: bold;
-                font-size: 1rem;
-                line-height: 1.375rem;
-                letter-spacing: 0.216px;
-                color: var(--bc_ssp-grey-1);
-              }
-
-              .global__paragraph {
-                line-height: 1.25rem;
-                color: var(--bc_ssp-grey-1);
-              }
-
               .read_article_btn {
+                position: absolute;
+                bottom: 24px;
+                right: 24px;
                 margin-left: auto;
                 font-weight: bold;
                 font-size: 16px;
                 text-decoration: none;
                 cursor: pointer;
-                color: var(--bc_ssp-blue-primary);
+                color: var(--brand-color-1);
               }
             }
 
-            .article_type_wrapper {
-              height: 100%;
-              display: flex;
-              flex-direction: column;
-            }
+            // .article_type_wrapper {
+            //   height: 100%;
+            //   display: flex;
+            //   flex-direction: column;
+            // }
           }
 
           .category_article_not_found {
