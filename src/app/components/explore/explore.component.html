@@ -1,4 +1,4 @@
 <div class="global__explore__page">
-  <app-secondary-navigation></app-secondary-navigation>
+  <app-secondary-navigation *ngIf="!router.url.includes('articleVideo')" ></app-secondary-navigation>
   <router-outlet></router-outlet>
 </div>

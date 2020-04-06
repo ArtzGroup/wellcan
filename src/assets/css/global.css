@@ -439,7 +439,11 @@ body {
       padding: 0; } }
   .global__header .header__menu {
     display: none; }
-
+.sr-only {
+  position: absolute;
+  overflow:hidden;
+  left: -10000px;
+}
 .global__button {
   display: table;
   font-weight: 600;
@@ -744,6 +748,42 @@ body {
       display: block;
       align-self: end;
       padding-right: 0; } }
+
+
+.partners {
+  display: block;
+  margin: 0 auto;
+  padding: 2rem 5vw;
+  grid-area: landing__howMuchReimbursed;
+}
+
+.partner-logos {
+  display: flex;
+  flex-direction: column;
+}
+.partner-logos img {
+  max-height: 200px;
+}
+
+@media screen and (min-width: 767px) {
+
+  .partners {
+    padding: 2rem 5vw;
+    grid-area: landing__howMuchReimbursed;
+
+  }
+
+  .partner-logos {
+    flex-direction: row;
+    flex-wrap: wrap;
+  }
+  .partner-logos img {
+    max-height: inherit;
+    max-width: 25%;
+  }
+}
+
+
 
 .landing__features {
   grid-area: landing__features;
@@ -1311,3 +1351,5 @@ body {
     opacity: 1; }
   100% {
     transform: scale(1); } }
+
+
